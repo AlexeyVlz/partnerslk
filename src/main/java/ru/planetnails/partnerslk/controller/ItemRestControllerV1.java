@@ -15,13 +15,13 @@ import java.util.List;
 @Slf4j
 @RequestMapping (value = "/api/v1/items")
 public class ItemRestControllerV1 {
-private ItemService itemService;
+private ItemService itemService ;
 
     @PostMapping()
     @PutMapping
     public String add(@RequestBody List<ItemAddDto> items){
          itemService.add(items);
-        return "Your data has been queued.";
+        return "Your data has been queued. ";
     }
 
     @GetMapping(produces =  "application/json;charset=UTF-8")
